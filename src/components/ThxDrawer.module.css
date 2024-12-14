@@ -1,0 +1,54 @@
+.thx_drawer {
+  width: 240px;
+  max-width: 240px;
+  padding: 20px;
+  background-color: #111;
+  flex-direction: column;
+  position: relative;
+  z-index: 99;
+}
+
+.main_title {
+  color: #44d62c;
+  font-family: "RazerF5";
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: normal;
+  max-height: 24px;
+  margin-bottom: 20px;
+}
+
+.drawer_select {
+  border: 1px solid #5d5d5d;
+  width: 200px;
+  max-height: 220px;
+  height: 220px;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.drawer_select .toolbar {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 29px;
+  background-color: #222;
+  border-top: 1px solid #707070;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.drawer_select .icon {
+  height: 28px;
+  width: 28px;
+  max-width: 28px;
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  will-change: background-color;
+  transition: background-color 0.2s;
+}
