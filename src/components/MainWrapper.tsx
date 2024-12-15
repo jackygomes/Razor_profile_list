@@ -3,6 +3,7 @@ import styles from "./MainWrapper.module.css";
 
 import ThxDrawer from "./ThxDrawer";
 import ThxWindow from "./ThxWindow";
+import DeleteAlert from "./DeleteAlert";
 
 const MainWrapper: FC = () => {
   return (
@@ -10,6 +11,7 @@ const MainWrapper: FC = () => {
       <div className={`${styles.thx_wrapper} flex`}>
         <ThxDrawer />
         <ThxWindow />
+        <DeleteAlert />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import classNames from "classnames";
 import styles from "./ToolBar.module.css";
-import { addProfile, deleteProfile, moveProfile } from "../actions";
+import { addProfile, deleteModal, editProfile, moveProfile } from "../actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const ToolBar: FC = () => {
@@ -20,6 +20,7 @@ const ToolBar: FC = () => {
   const handleMove = (direction) => {
     dispatch(moveProfile(selectedIndex, direction));
   };
+  const test = true;
 
   return (
     <div className={`${styles.toolbar} flex`}>
@@ -36,6 +37,7 @@ const ToolBar: FC = () => {
           [styles.edit]: true,
           [styles.show]: !profiles[selectedIndex].isDefault,
         })}
+        onClick={() => dispatch(editProfile(selectedIndex, test))}
       ></div>
       <div
         className={classNames({
@@ -43,7 +45,7 @@ const ToolBar: FC = () => {
           [styles.delete]: true,
           [styles.show]: !profiles[selectedIndex].isDefault,
         })}
-        onClick={() => dispatch(deleteProfile(selectedIndex))}
+        onClick={() => dispatch(deleteModal(true))}
       ></div>
 
       <div
