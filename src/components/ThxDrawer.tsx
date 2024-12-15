@@ -15,7 +15,7 @@ const ThxDrawer: FC = () => {
     <div className={styles.thx_drawer}>
       <div className={styles.main_title}>Profile List</div>
       <div className={`${styles.drawer_select} flex`}>
-        <div className={styles.profile_list_wrap}>
+        <div className={styles.profile_list_wrap} key={profiles}>
           {profiles.map((item, index) => {
             return (
               <ProfileItem

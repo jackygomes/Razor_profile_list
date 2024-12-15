@@ -49,8 +49,11 @@ const ProfileItem: FC<Proptypes> = (props: Proptypes) => {
           [styles.profile_item]: true,
           [styles.show]: isEdit,
         })}
-        defaultValue={profileName}
-        onChange={(e) => setProfileName(e.target.value)}
+        defaultValue={name}
+        onChange={(e) => {
+          console.log(name, e.target.value);
+          setProfileName(e.target.value);
+        }}
         maxLength={25}
         onBlur={(e) => {
           dispatch(renameProfile(selectedIndex, profileName));
