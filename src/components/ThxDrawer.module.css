@@ -28,6 +28,10 @@
   position: relative;
   margin-bottom: 1.25rem;
 }
+.drawer_select .profile_list_wrap {
+  overflow-y: auto;
+  max-height: calc(100% - 29px);
+}
 
 .drawer_select .toolbar {
   position: absolute;
